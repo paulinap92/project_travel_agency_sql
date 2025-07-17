@@ -21,7 +21,7 @@ class Country:
     name: str
     pattern: str = r'^[A-Za-z ]+$'
 
-    def __repr__(self) -> str:
+    def __repr__(self) -> str: # pragma: no cover
         """
         Returns a string representation of the Country object.
 
