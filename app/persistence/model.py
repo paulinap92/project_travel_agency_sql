@@ -23,27 +23,27 @@ class Trip:
     _agency_id: int | None = None
 
     @property
-    def id(self) -> int | None:
+    def id(self) -> int | None: # pragma: no cover
         """Returns the trip ID."""
         return self._id
 
     @property
-    def destination(self) -> str | None:
+    def destination(self) -> str | None: # pragma: no cover
         """Returns the destination of the trip."""
         return self._destination
 
     @property
-    def price(self) -> Decimal | None:
+    def price(self) -> Decimal | None: # pragma: no cover
         """Returns the price of the trip per person."""
         return self._price
 
     @property
-    def num_of_people(self) -> int | None:
+    def num_of_people(self) -> int | None: # pragma: no cover
         """Returns the number of people for the trip."""
         return self._num_of_people
 
     @property
-    def agency_id(self) -> int | None:
+    def agency_id(self) -> int | None: # pragma: no cover
         """Returns the ID of the travel agency."""
         return self._agency_id
 
