@@ -1,6 +1,6 @@
 # 🧳 Travel Agency Trips Analyzer
 
-![Python](https://img.shields.io/badge/Python-3.11%2B-blue?logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.12%2B-blue?logo=python&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-MySQL-blue?logo=mysql&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-ready-blue?logo=docker&logoColor=white)
 ![Pipenv](https://img.shields.io/badge/Dependency%20Manager-Pipenv-9cf?logo=pipenv&logoColor=black)
@@ -117,7 +117,7 @@ pipenv install
 Make sure Docker is running, then execute:
 
 ```bash
-docker-compose up -d
+docker-compose up --build
 ```
 
 This will start the MySQL database as defined in `docker-compose.yml`.
@@ -166,4 +166,4 @@ open htmlcov/index.html
 
 ## Contact
 
-![Email](https://img.shields.io/badge/Contact-paulina.piotrowska%40email.com-informational?logo=gmail)
+![Email](https://img.shields.io/badge/Contact-paulina.piotrowska.p%40gmail.com-informational?logo=gmail)
