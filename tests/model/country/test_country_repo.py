@@ -5,11 +5,9 @@ from app.model.countries import Country, CountryConverter, CountryRepo
 from app.file_manager.file_manager import FileManager
 
 
-def test_get_countries(country_repo, mock_countries):
+def test_get_countries(country_repo, countries_data_set):
     countries = country_repo.get_countries()
-    assert len(countries) == len(mock_countries)
-    assert countries[0].name == "Poland"
-    assert countries[1].name == "Spain"
+    assert countries == countries_data_set
 
 
 

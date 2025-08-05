@@ -19,6 +19,13 @@ def countries_data_text():
         "Spain"
     ]
 
+@pytest.fixture
+def countries_data_set():
+    return {
+        "Poland",
+        "Spain"
+    }
+
 
 @pytest.fixture
 def countries_converted_dict():

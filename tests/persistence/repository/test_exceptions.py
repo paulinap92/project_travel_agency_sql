@@ -4,7 +4,8 @@ import tempfile
 from app.persistence.create_db import _validate_row, create_tables, drop_tables
 from app.persistence.connection import MySQLConnectionPoolBuilder
 from mysql.connector.errors import InterfaceError
-
+from unittest.mock import MagicMock, patch
+from mysql.connector import Error
 
 def test_validate_row_invalid_column_count(caplog):
     row = ["1", "Madrid", "1000"]
@@ -41,10 +42,6 @@ def test_insert_data_from_csv_skips_invalid_rows(monkeypatch, caplog):
         os.remove(tmp_csv_path)
 
 
-from unittest.mock import MagicMock, patch
-from mysql.connector import Error
-
-
 def test_create_tables_database_error(caplog):
     # Przygotowanie: fałszywy connection_pool, który podnosi wyjątek
     fake_pool = MagicMock()
@@ -55,7 +52,6 @@ def test_create_tables_database_error(caplog):
         create_tables(fake_pool, csv_file_path="dummy.csv")
 
     assert any("Database error during table creation or data insertion" in message for message in caplog.text.splitlines())
-
 
 
 def test_drop_tables_database_error(caplog):

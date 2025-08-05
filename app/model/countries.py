@@ -102,14 +102,14 @@ class CountryRepo:
         if path:
             self.countries = CountryConverter.to_countries(FileManager(['read']).read_file(path))
 
-    def get_countries(self) -> list[Country]:
+    def get_countries(self) -> set[str]:
         """
-        Retrieves a list of country names from the repository.
+        Retrieves a set of country names from the repository.
 
         Returns:
-            list[str]: A list of country names.
+            set[str]: A set of country names.
         """
-        return list(self.countries.values())
+        return set([country.name for country in self.countries.values()])
 
 
 european_countries_repo = CountryRepo('.\\app\\data\\european_countries.txt')
