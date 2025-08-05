@@ -1,0 +1,16 @@
+[run]
+# Tylko kod produkcyjny – ignorujemy testy, pliki startowe, konfiguracyjne itd.
+source = app
+omit =
+    */tests/*
+    */test_*.py
+    */__init__.py
+    */conftest.py
+    */main.py
+    */settings.py
+    */config/*
+    */migrations/*
+    */venv/*
+    */.venv/*
+
+
